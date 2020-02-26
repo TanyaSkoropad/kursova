@@ -1,0 +1,26 @@
+<br><br><br>
+<br>
+<div class="container-fluid" >
+  <button type="button" class="close" (click)="closeProfile()" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  
+<div id ="carMain">
+<div class ="card">
+  <div class = "card-body">
+<div *ngIf = "avatarUploaded">
+<div *ngFor = "let avatar of avatars"> 
+<img [src] = "avatar" height="200px" style="text-align: right">
+</div>
+</div>
+
+
+<div class="name">
+  <h2> {{userProfile.firstName}}  {{userProfile.lastName}}</h2>
+</div>
+<div class="points">
+  <h6> <i class="fa fa-envelope-square" aria-hidden="true"></i> {{userProfile.email}} </h6>
+  <h6> <i class="fa fa-phone-square" aria-hidden="true"></i> {{userProfile.phone}} </h6>
+</div>
+</div>
+</div>

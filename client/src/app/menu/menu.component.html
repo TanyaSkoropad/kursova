@@ -1,0 +1,43 @@
+<div class="page-container">
+    <nav class="navbar navbar-expand-lg" style="background-color:#2D4161;" >
+      <a class="navbar-brand" href="/ui/home" style="color:white" > Plart  </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <br>
+    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent" style="color:white" >
+
+      <div class="dropdown">
+
+        <button class="dropbtn">{{user.firstName}} <i class="fa fa-caret-square-o-down" aria-hidden="true"></i> </button>
+        <div class="dropdown-content">
+          <a class="fa fa-user-circle" (click)="goToUserProfile()"> Profile</a>
+          <div class="dropdown-divider"></div>
+          <a class="fa fa-sign-out" (click)= "logout()"> Logout</a>
+        </div>
+      </div>
+
+    </div>
+    </nav>
+    </div>
+
+
+              <!-- Sidebar -->
+  <div id="wrapper" class="active">
+  <div id="sidebar-wrapper">
+  <ul id="sidebar_menu" class="sidebar-nav">
+  <li class="sidebar-brand">
+    <a id="menu-toggle" (click)="goHome()">Plart</a></li>
+
+  </ul>
+  <br>
+  <ul id="sidebar" class="sidebar-nav" >
+  <li class="sidebar-user">
+  <img src="assets/img/icon1.png" width="110px" height="110px" style="margin-left: 7%">
+  <a id="name" (click)="goToUserProfile()">{{user.firstName}}  {{user.lastName}}</a></li>
+  <li  > <a class="" (click) = "goToUserProfile()">My profile <i  aria-hidden="true"></i></a></li>
+  <li  > <a class=""(click)= "logout()">Exit <i  aria-hidden="true"></i></a></li>
+
+</ul>
+  </div>
+  </div>

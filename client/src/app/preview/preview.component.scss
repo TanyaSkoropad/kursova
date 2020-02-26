@@ -1,0 +1,138 @@
+.carousel-content {
+    position: absolute;
+    bottom: 60%;
+    left: 16%;
+    z-index: 20;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  }
+  .carousel-content-3 {
+    position: absolute;
+    bottom: 90%;
+    left: 60%;
+    z-index: 20;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  }
+
+  .mycard {
+      height: 170px;
+  }
+
+  .cta-sub {
+	padding-top: 150px;
+	padding-bottom: 150px;
+	background-size: cover;
+}
+
+.cta-inner {
+	text-align:center;
+	float: none;
+}
+
+.cta-sub .cta-inner h1 {
+	font-size: 36px;
+	color: #FFFFFF;
+	font-weight: 900;
+	line-height: 1.2;
+	margin-top: 10px;
+	margin-bottom: 0;
+	letter-spacing:-2px;
+}
+
+.cta-sub .cta-inner p {
+	font-family: Open Sans;
+	font-size: 14px;
+	color: #FFFFFF;
+	font-weight: 300;
+	line-height: 1.4;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.subscribe-form {
+	text-align: left;
+}
+.center-form {
+	text-align: center;
+}
+
+.subscribe-form .mail {
+ background-color: #F9F9F9;
+ border: none;
+ border-radius: 5px 0 0 5px;
+ outline: none;
+ height: 40px;
+ padding: 0 130px 0 20px;
+ box-shadow: none;
+ -webkit-box-sizing: content-box;
+ -moz-box-sizing: content-box;
+ box-sizing: content-box;
+ transition: all .3s;
+}
+
+
+.subscribe-form input {
+  color: #222222;
+  font-family: Open Sans;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+.subscribe-form .submit-button {
+  font-size: 0.9em;
+  height: 40px;
+  border: 2px solid;
+  border-radius: 0 5px 5px 0;
+  margin: 0;
+  padding: 0 25px 0 25px;
+	border-color: #FFFFFF;
+  background-color: #927f54;
+  color: #FFFFFF;
+	box-shadow: 0 0 1px transparent;
+  outline: none;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	transition: 500ms;
+}
+
+.subscribe-form .submit-button:hover {
+  border-color: #927f54;
+  -webkit-transition: 500ms;
+	-moz-transition: 500ms;
+  transition: 500ms;
+}
+
+.product .subscribe-form .submit-button {
+	border-color: #FFFFFF;
+  background-color: #927f54;
+}
+
+.product .subscribe-form .submit-button:hover {
+  border-color: #927f54;
+}
+
+
+.error_message {
+	color:#fc6e51;
+	font-family: Open Sans;
+	padding-bottom:15px;
+	font-size:13px;
+	line-height:30px;
+}
+#success_page {
+	color:#9ce726;
+	font-family: Open Sans;
+	padding-bottom:10px;
+	font-size:12px;
+}
+#success_page h3 {
+	font-size:17px;
+	font-weight:400px;
+	color:#4ab217;
+}
+#success_page p {
+	font-size:12px;
+	font-weight:400px;
+	color:#b3b3b3;
+}
