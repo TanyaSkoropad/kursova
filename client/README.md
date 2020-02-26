@@ -1,7 +1,0 @@
-client: 
-npm install 
-ng serve
-
-server:
-npm install
-node server.js
