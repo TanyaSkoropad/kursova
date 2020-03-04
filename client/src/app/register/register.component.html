@@ -1,69 +1,93 @@
-<br><br><br><br><br><br><br><br>
-<div style="height: 80%" class="d-flex justify-content-center align-items-center">
-  <form form="registerForm" (ngSubmit)="onSubmit()" #f="ngForm" class="border border-light p-4" [mustMatch]="['password', 'confirmPassword']" novalidate>
+<div class="view w-100"
+     style="background-image: url(../../assets/img/photo_2020-03-01_16-42-48.jpg); background-repeat: no-repeat;background-size: 100%"
+     ng-app="">
+  <br>
+  <div style="margin-left: 3%; margin-top: -1.4%" class="d-flex justify-content-left align-items-center">
+    <form form="registerForm" style="border-radius: 25px;border:5px solid #ac7339;
+   color: #ac7339; padding: 20px; font-family:verdana; margin: 1.5%"
+          (ngSubmit)="onSubmit()" #f="ngForm" [mustMatch]="['password', 'confirmPassword']" novalidate>
 
-  <p class="h3 mb-4 text-center">Welcome to 
-    <br>
-    <kbd>plart</kbd></p>
-    <div class="form-group">
-      <label for="firstName">First name</label>
-    <input type="text" name="firstName" [(ngModel)]="registerForm.firstName" class="form-control mb-2" #firstName="ngModel" required minlength="2" maxlength="15">
-    <div style="color: red" *ngIf="firstName.invalid && firstName.touched">
-        <!-- <div *ngIf="username.errors.required">Username is required</div>
-        <div *ngIf="username.errors.minlength">Username must be at least 2 characters</div>
-        <div *ngIf="fullName.errors.maxlength">Username can be max 15 characters</div> -->
-    </div>
-  </div>
+      <p class="h3 mb-4 text-center">Welcome to
+        <br>
+        <kbd style="background-color: #5B320A">Plart</kbd></p>
+      <div class="form-group">
+        <label for="firstName">First name</label>
+        <pre style="color: red; display: inline"> *</pre>
+        <input type="text" name="firstName" [(ngModel)]="registerForm.firstName" class="form-control mb-2 "
+               #firstName="ngModel" required minlength="3" style="color: black">
+        <div style="color: red" *ngIf="firstName.invalid && firstName.touched">
+          <div *ngIf="firstName.errors.required" class="invalidBorder">First name is required</div>
+          <div *ngIf="firstName.errors.minlength">First name must be at least 3 characters</div>
 
-  <div class="form-group">
-    <label for="lastName">Last name</label>
-  <input type="text" name="lastName" [(ngModel)]="registerForm.lastName" class="form-control mb-2" #lastName="ngModel" required minlength="2" maxlength="15">
-  <div style="color: red" *ngIf="lastName.invalid && lastName.touched">
-      <!-- <div *ngIf="username.errors.required">Username is required</div>
-      <div *ngIf="username.errors.minlength">Username must be at least 2 characters</div>
-      <div *ngIf="fullName.errors.maxlength">Username can be max 15 characters</div> -->
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last name</label>
+        <pre style="color: red; display: inline"> *</pre>
+        <input type="text" style="color: black" name="lastName" [(ngModel)]="registerForm.lastName"
+               class="form-control mb-2" #lastName="ngModel" required minlength="3">
+        <div style="color: red" *ngIf="lastName.invalid && lastName.touched">
+          <div *ngIf="lastName.errors.required">Last name is required</div>
+          <div *ngIf="lastName.errors.minlength">Last name must be at least 3 characters</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <pre style="color: red; display: inline"> *</pre>
+        <input type="email" style="color: black; width: 330px;" name="email" [(ngModel)]="registerForm.email"
+               class="form-control mb-2" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+               required email/>
+        <div style="color: red" *ngIf="email.invalid && email.touched">
+          <div *ngIf="email.errors.required">Email is required</div>
+          <div *ngIf="email.errors.email">Your email is not valid</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" style="color: black" name="numberPhone" [(ngModel)]="registerForm.phone"
+               class="form-control mb-2" #numberPhone="ngModel"
+               [ngClass]="{ 'is-invalid': f.submitted && numberPhone.invalid }" required
+               pattern="^[(]{0,1}[0-9]{0,3}[)]{0,1}[-\s\.0-9]{0,11}$"/>
+        <!--<div style="color: red" *ngIf="numberPhone.invalid && numberPhone.touched">-->
+        <!-- <div *ngIf="numberPhone.errors.required">Phone Number is required</div>
+        <div *ngIf="numberPhone.errors.minlength">Phone Number must containts 10 symbols</div>
+        <div *ngIf="numberPhone.errors.pattern">Phone Number must be 063 123 45 67</div> -->
+        <!--</div>-->
+      </div>
+
+      <div class="form-group">
+        <label for="password" style="display: inline-block">Password </label>
+        <pre style="color: red; display: inline"> *</pre>
+        <input type="password" style="color: black" name="password" [(ngModel)]="registerForm.password"
+               class="form-control mb-2" #password="ngModel" required minlength="8"/>
+        <div style="color: red" *ngIf="password.invalid && password.touched">
+          <div *ngIf="password.errors.required">Password is required</div>
+          <div *ngIf="password.errors.minlength">Password must be at least 8 characters</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm password</label>
+        <pre style="color: red; display: inline"> *</pre>
+        <input type="password" style="color: black" name="confirmPassword" [(ngModel)]="registerForm.confirmPassword"
+               class="form-control mb-2" #confirmPassword="ngModel"
+               [ngClass]="{ 'is-invalid': f.submitted && confirmPassword.invalid }" required/>
+        <div style="color: red" *ngIf="confirmPassword.invalid && confirmPassword.touched">
+          <div *ngIf="confirmPassword.errors.required">Confirm Password is required</div>
+          <div *ngIf="confirmPassword.errors.mustMatch">Passwords must match</div>
+        </div>
+      </div>
+
+      <div>
+        <button mdbBtn style="background-color: #ac7339; width: 153px" class="my-4" type="submit">Sign up</button>
+        <a href="/ui/auth/login" mdbBtn style="background-color: #5B320A; color: white; width: 153px" type="button">Cancel</a>
+      </div>
+      <div>
+        <pre style="color: red; display: inline">* <pre
+          style="display: inline; color: #ac7339">is a necessary input</pre></pre>
+      </div>
+    </form>
   </div>
 </div>
-
-<div class="form-group">
-  <label for="email">Email</label>
-  <input type="email" name="email" [(ngModel)]="registerForm.email" class="form-control mb-2"#email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
-  <div style="color: red" *ngIf="email.invalid && email.touched">
-      <div *ngIf="email.errors.required">Email is required</div>
-      <div *ngIf="email.errors.email">Your email not valid</div>
-  </div>
-</div>
-
-<div class="form-group">
-  <label for="phone">Phone Number</label>
-  <input type="text" name="phone" [(ngModel)]="registerForm.phone" class="form-control mb-2" #numberPhone="ngModel" [ngClass]="{ 'is-invalid': f.submitted && numberPhone.invalid }" required pattern="^[(]{0,1}[0-9]{0,3}[)]{0,1}[-\s\.0-9]{0,11}$" minlength="10"/>
-  <div style="color: red" *ngIf="numberPhone.invalid && phone.touched">
-      <!-- <div *ngIf="numberPhone.errors.required">Phone Number is required</div>
-      <div *ngIf="numberPhone.errors.minlength">Phone Number must containts 10 symbols</div>
-      <div *ngIf="numberPhone.errors.pattern">Phone Number must be 063 123 45 67</div> -->
-  </div>
-  </div>
-
-<div class="form-group">
-    <label for="password">Password</label>
-    <input type="password" name="password" [(ngModel)]="registerForm.password" class="form-control mb-2" #password="ngModel" required minlength="8" />
-    <div style="color: red" *ngIf="password.invalid && password.touched">
-        <div *ngIf="password.errors.required">Password is required</div>
-        <div *ngIf="password.errors.minlength">Password must be at least 8 characters</div>
-    </div>
-</div>
-<div class="form-group">
-    <label for="confirmPassword">Confirm password</label>
-    <input type="password" name="confirmPassword" [(ngModel)]="registerForm.confirmPassword" class="form-control mb-2" #confirmPassword="ngModel" [ngClass]="{ 'is-invalid': f.submitted && confirmPassword.invalid }" required/>
-    <div style="color: red" *ngIf="confirmPassword.invalid && confirmPassword.touched">
-        <div *ngIf="confirmPassword.errors.required">Confirm Password is required</div>
-        <div *ngIf="confirmPassword.errors.mustMatch">Passwords must match</div>
-    </div>
-</div>
-
-<div>
-  <button mdbBtn style="background-color: #336B87" class="my-4" type="submit">Sign up</button>
-  <a href="/ui/auth/login" mdbBtn style="background-color: #c5001a; color: white" type="button">Cancel</a>
-  </div>
-  </form>
-  </div>

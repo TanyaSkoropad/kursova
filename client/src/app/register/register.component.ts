@@ -9,23 +9,17 @@ import { HttpResponse } from '@angular/common/http';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  
+
   registerForm: any = {};
   signupInfo: SignUpInfo;
   isSignedUp = false;
   isSignUpFailed = false;
   errorMessage = '';
-   
- 
+
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
-
-
-
-
   }
-
 
   onSubmit() {
     this.signupInfo = new SignUpInfo(
@@ -50,6 +44,9 @@ export class RegisterComponent implements OnInit {
   }
 
   reloadPage() {
-    window.location.href='ui/auth/login';
+    window.location.href='/ui/home';
   }
 }
+
+
+

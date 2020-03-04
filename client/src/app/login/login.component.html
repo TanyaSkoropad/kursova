@@ -3,11 +3,11 @@
       <p class="h3 mb-4">Sign in</p>
       <input type="text" name="username" [(ngModel)]="loginForm.username" class="form-control mb-4" placeholder="Username">
       <input type="password" name="password" [(ngModel)]="loginForm.password" class="form-control mb-4" placeholder="Password">
-  
-      <button mdbBtn style="background-color: #336B87;" block="true" class="my-4" type="submit">Sign in</button>
-  
+      <p *ngIf = "showError" >Login or password is incorrect</p>
+      <button mdbBtn style="background-color: #ac7339;" block="true" class="my-4" type="submit">Sign in</button>
+
       <p>Not a member?
-        <a href="/ui/signup" style="color: #336B87">Register</a>
+        <a href="/ui/signup" style="color: #ac7339">Register</a>
       </p>
     </form>
   </div>
