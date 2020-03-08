@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
 import { SignUpInfo } from '../auth/signup-info';
 import { HttpResponse } from '@angular/common/http';
+import {UserService} from "../services/user.service";
 
 @Component({
   selector: 'app-register',
@@ -15,10 +16,11 @@ export class RegisterComponent implements OnInit {
   isSignedUp = false;
   isSignUpFailed = false;
   errorMessage = '';
-
-  constructor(private authService: AuthService) { }
+  emailExist : boolean;
+  constructor(private authService: AuthService,private userService : UserService) { }
 
   ngOnInit() {
+    this.emailExist=false;
   }
 
   onSubmit() {
@@ -41,6 +43,18 @@ export class RegisterComponent implements OnInit {
         this.isSignUpFailed = true;
       }
     );
+  }
+
+
+  emailChange(): void{
+    this.emailExist = false;
+    this.authService.checkEmail(this.registerForm.email).subscribe(data => {
+      if(data===true){
+         this.emailExist=true;
+      }
+    },error => {
+      console.log(error);
+    });
   }
 
   reloadPage() {

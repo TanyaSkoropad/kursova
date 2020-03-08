@@ -9,10 +9,11 @@ import {MenuComponent} from './menu/menu.component';
 import {UsersComponent} from './users/users.component';
 import { PreviewComponent } from './preview/preview.component';
 import {UserProfileComponent} from './user-profile/user-profile.component';
+import {MyPostsComponent} from "./my-posts/my-posts.component";
 const routes: Routes = [
   // { path: '**', redirectTo: 'auth/login'},
 
- 
+
   {
     path: 'ui/preview',
     component: PreviewComponent
@@ -43,7 +44,11 @@ const routes: Routes = [
     path: 'ui/userprofile',
     component: UserProfileComponent
   },
-  
+  {
+    path: 'ui/my-posts',
+    component : MyPostsComponent
+  }
+
 ];
 
 @NgModule({

@@ -2,7 +2,7 @@
      style="background-image: url(../../assets/img/photo_2020-03-01_16-42-48.jpg); background-repeat: no-repeat;background-size: 100%"
      ng-app="">
   <br>
-  <div style="margin-left: 3%; margin-top: -1.4%" class="d-flex justify-content-left align-items-center">
+  <div style="margin-left: 6%; margin-top: -1.4%" class="d-flex justify-content-left align-items-center">
     <form form="registerForm" style="border-radius: 25px;border:5px solid #ac7339;
    color: #ac7339; padding: 20px; font-family:verdana; margin: 1.5%"
           (ngSubmit)="onSubmit()" #f="ngForm" [mustMatch]="['password', 'confirmPassword']" novalidate>
@@ -37,8 +37,9 @@
         <label for="email">Email</label>
         <pre style="color: red; display: inline"> *</pre>
         <input type="email" style="color: black; width: 330px;" name="email" [(ngModel)]="registerForm.email"
-               class="form-control mb-2" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+               class="form-control mb-2" #email="ngModel" (ngModelChange)="emailChange()" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
                required email/>
+        <p style="color: red" *ngIf="emailExist">User with this email already exists</p>
         <div style="color: red" *ngIf="email.invalid && email.touched">
           <div *ngIf="email.errors.required">Email is required</div>
           <div *ngIf="email.errors.email">Your email is not valid</div>
@@ -81,7 +82,7 @@
       </div>
 
       <div>
-        <button mdbBtn style="background-color: #ac7339; width: 153px" class="my-4" type="submit">Sign up</button>
+        <button *ngIf="!emailExist" mdbBtn style="background-color: #ac7339; width: 153px" class="my-4" type="submit">Sign up</button>
         <a href="/ui/auth/login" mdbBtn style="background-color: #5B320A; color: white; width: 153px" type="button">Cancel</a>
       </div>
       <div>

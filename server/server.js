@@ -70,6 +70,18 @@ app.post('/login', function (req, res, next) {
 })
 
 
+app.post('/checkEmail', function (req, res) {
+    var email = req.body.email;
+    User.exists({ login:email}, function(err, result) {
+        if (err) {
+            res.send(err);
+        } else {
+            res.send(result);
+        }
+    });
+})
+
+
 app.get('/user/username/:name', function (req, res) {
     var name = req.params.name;
     var promise = User.findOne({login: name}).exec();

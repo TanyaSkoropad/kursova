@@ -31,8 +31,10 @@ export class MenuComponent implements OnInit {
 
   }
 
- 
 
+  goToMyPosts(){
+    this.router.navigate(['/ui/my-posts']);
+  }
 
   logout(){
     this.tokenStorage.signOut();

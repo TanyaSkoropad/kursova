@@ -22,6 +22,7 @@ import {DatePipe} from '@angular/common';
 import {MatExpansionModule} from '@angular/material';
 import {  ReactiveFormsModule } from '@angular/forms';
 import {ToastrModule} from "ngx-toastr";
+import { MyPostsComponent } from './my-posts/my-posts.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {ToastrModule} from "ngx-toastr";
     MenuComponent,
     UsersComponent,
     UserProfileComponent,
-    PreviewComponent
+    PreviewComponent,
+    MyPostsComponent
     // Material.MatDialogModule,
     
   ],

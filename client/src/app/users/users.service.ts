@@ -15,7 +15,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class UsersService {
-
+  private checkEmailUrl = Globals.baseURL + '/checkEmail';
   constructor(private http: HttpClient) {
   }
 
@@ -34,10 +34,6 @@ export class UsersService {
   getUserByUsername(username: String): Observable<User> {
     return this.http.get<User>(Globals.baseURL + '/user/username/' + username);
   }
-
-
-
-
 
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {

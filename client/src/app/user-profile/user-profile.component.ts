@@ -18,11 +18,11 @@ export class UserProfileComponent implements OnInit {
   error: ErrorEvent;
   avatars: String [];
   avatarUploaded: boolean = true;
+  emailExist: boolean = false;
 
-  
   constructor(private userService: UsersService,
      private tokenStorage: TokenStorageService,
-      private router: Router, 
+      private router: Router,
       private dialog: MatDialog) {
   }
 
