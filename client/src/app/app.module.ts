@@ -23,6 +23,7 @@ import {MatExpansionModule} from '@angular/material';
 import {  ReactiveFormsModule } from '@angular/forms';
 import {ToastrModule} from "ngx-toastr";
 import { MyPostsComponent } from './my-posts/my-posts.component';
+import { MyMessagesComponent } from './my-messages/my-messages.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MyPostsComponent } from './my-posts/my-posts.component';
     UsersComponent,
     UserProfileComponent,
     PreviewComponent,
-    MyPostsComponent
+    MyPostsComponent,
+    MyMessagesComponent
     // Material.MatDialogModule,
     
   ],

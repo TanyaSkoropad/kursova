@@ -1,7 +1,13 @@
 <br><br><br>
 <br>
 <div class="container-fluid" >
-<p>
-  my-posts works!
-</p>
+
+  <form  class="text-center border border-light p-5">
+  <input type="text" name="description" [(ngModel)]="post.username" class="form-control mb-1" placeholder="description">
+  <input type="text" name="location" [(ngModel)]="loginForm.password" class="form-control mb-1" placeholder="location">
+  <input type="text" name="type" [(ngModel)]="loginForm.password" class="form-control mb-1" placeholder="type">
+  <button mdbBtn style="background-color: #ac7339;" block="true" class="my-4" type="submit">Create</button>
+
+  </form>
+
 </div>

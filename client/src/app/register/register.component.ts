@@ -20,7 +20,6 @@ export class RegisterComponent implements OnInit {
   constructor(private authService: AuthService,private userService : UserService) { }
 
   ngOnInit() {
-    this.emailExist=false;
   }
 
   onSubmit() {
@@ -45,8 +44,7 @@ export class RegisterComponent implements OnInit {
     );
   }
 
-
-  emailChange(): void{
+  emailChange(): void {
     this.emailExist = false;
     this.authService.checkEmail(this.registerForm.email).subscribe(data => {
       if(data===true){

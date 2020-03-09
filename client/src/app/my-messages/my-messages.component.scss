@@ -1,0 +1,129 @@
+.container{
+  margin: auto;
+  width: 400px;
+  border: 2px solid rgb(211, 212, 211);
+  padding: 10px;
+  text-align: left;
+  margin-right: 30%;
+}
+
+p {
+  text-align:center;
+  font-weight:bold;
+}
+
+
+.button {
+  background-color: #336B87
+}
+
+
+#avatarChange {
+  display: inline;
+}
+
+#avatarChange button{
+  border-color: rgb(31, 84, 110);
+  color: white;
+  background-color: #336B87;
+  cursor: pointer;
+  width: 40%;
+  font-size: 100%;
+  display: inline-block;
+  margin-right: 15px
+}
+
+#avatarChange button :hover{
+  color: black;
+  background-color: #2987BB;
+  cursor: pointer;
+}
+
+.container-fluid {
+  background-color: #f1f1f1;
+  margin: auto;
+  width: 82%;
+  height:82%;
+  border: 2px solid rgb(211, 212, 211);
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 1%;
+  margin-bottom: 2%;
+}
+
+h3{
+  font-weight:bold;
+}
+
+.card-block .card{
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 270px;
+  height: 100px;
+  left: 5%;
+  margin: 1em;
+
+}
+
+.card-block .card .card-body{
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  display:inline-block;
+  width:270px;
+  padding:10px 10px 10px;
+}
+
+.card-block .card .card-body i{
+  padding-left: 0%;
+  margin-right: 20px;
+
+}
+
+.desc a{
+  color: black;
+}
+
+.desc a :hover{
+  color: #336B87;
+}
+
+.card{
+  position: relative;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 350px;
+  height: 400px;
+  text-align: center;
+  left: 1%;
+  margin: 2em;
+}
+
+.info{
+  position: relative;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  left: 1%;
+  margin: 2em;
+  border-color: black;
+}
+
+.points{
+  text-align: center;
+}
+
+.name{
+  text-align: center;
+}
+
+
+
+
+
+

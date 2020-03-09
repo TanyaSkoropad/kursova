@@ -1,13 +1,28 @@
-<div style="height: 100vh" class="d-flex justify-content-center align-items-center">
-  <form form ="loginForm" (ngSubmit)="onSubmit()" class="text-center border border-light p-5">
-      <p class="h3 mb-4">Sign in</p>
-      <input type="text" name="username" [(ngModel)]="loginForm.username" class="form-control mb-4" placeholder="Username">
-      <input type="password" name="password" [(ngModel)]="loginForm.password" class="form-control mb-4" placeholder="Password">
+<div class="view w-100"
+     style="background-image: url(../../assets/img/photo_2020-03-01_16-42-48.jpg); background-repeat: no-repeat;background-size: 100%"
+     ng-app="">
+<div style="height: 100vh; margin-left: 15%; " class="d-flex justify-content-left align-items-center">
+  <form form ="loginForm" (ngSubmit)="onSubmit()" class="text-center p-5" style="border-radius: 25px;
+        border:5px solid #ac7339;color: #ac7339;
+        padding: 10px; font-family:verdana">
+      <p class="h3 mb-4"> <kbd style="background-color: #5B320A; padding: 4%">Sign in</kbd></p>
+    <div class="form-group text-left">
+      <label for="username">Username</label>
+      <input type="text" name="username" [(ngModel)]="loginForm.username" class="form-control mb-4">
+    </div>
+    <div class="form-group text-left">
+      <label for="password">Password</label>
+      <input type="password" name="password" [(ngModel)]="loginForm.password" class="form-control mb-4">
+    </div>
       <p *ngIf = "showError" >Login or password is incorrect</p>
-      <button mdbBtn style="background-color: #ac7339;" block="true" class="my-4" type="submit">Sign in</button>
+      <button mdbBtn style="background-color: #ac7339;" class="my-4" block="true" type="submit">Sign in</button>
 
       <p>Not a member?
         <a href="/ui/signup" style="color: #ac7339">Register</a>
       </p>
     </form>
   </div>
+</div>
+
+<!--margin-left: 15% ; margin: 1.5%;-->
+<!--class="my-4"-->

@@ -20,7 +20,8 @@ export class MenuComponent implements OnInit {
   private notificationsOpen: boolean;
 
 
-  constructor(private tokenStorage: TokenStorageService, private userService: UsersService, private route: ActivatedRoute,  private router: Router) { }
+  constructor(private tokenStorage: TokenStorageService, private userService: UsersService,
+              private route: ActivatedRoute,  private router: Router) { }
 
   ngOnInit() {
     this.notificationsOpen = false;
@@ -31,17 +32,18 @@ export class MenuComponent implements OnInit {
 
   }
 
-
   goToMyPosts(){
     this.router.navigate(['/ui/my-posts']);
+  }
+
+  goToMyMessages(){
+    this.router.navigate(['/ui/my-messages']);
   }
 
   logout(){
     this.tokenStorage.signOut();
     window.location.href='/ui/preview';
   }
-
-
 
   goToUserProfile(){
     this.router.navigate(['/ui/userprofile']);

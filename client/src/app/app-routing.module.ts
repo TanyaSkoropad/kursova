@@ -10,6 +10,7 @@ import {UsersComponent} from './users/users.component';
 import { PreviewComponent } from './preview/preview.component';
 import {UserProfileComponent} from './user-profile/user-profile.component';
 import {MyPostsComponent} from "./my-posts/my-posts.component";
+import {MyMessagesComponent} from "./my-messages/my-messages.component";
 const routes: Routes = [
   // { path: '**', redirectTo: 'auth/login'},
 
@@ -47,6 +48,10 @@ const routes: Routes = [
   {
     path: 'ui/my-posts',
     component : MyPostsComponent
+  },
+  {
+    path: 'ui/my-messages',
+    component: MyMessagesComponent
   }
 
 ];
