@@ -7,6 +7,7 @@ var bcrypt = require('bcrypt');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 var User = require('../server/models/user');
+var Posts = require('../server/models/posts');
 var jwt = require('jsonwebtoken');
 
 const cors = require('cors');
@@ -16,11 +17,20 @@ app.options('*', cors());
 mongoose.connect("mongodb://localhost:27017/plart", {
     useUnifiedTopology: true,
     useNewUrlParser: true,
-}).then(function(){
+}).then(function () {
     console.log('DB Connected!');
 })
 
 app.listen(8080, function () {
+    // var promise = User.findOne({login: 'email@email.ua'}).exec();
+    // promise.then(function (doc) {
+    //     Posts.create({
+    //         description: 'desk1 good',
+    //         location: 'Lviv',
+    //         types: ['typeOne', 'typeTwo222'],
+    //         creator: doc.id
+    //     });
+    // })
     console.log('started');
 })
 
@@ -72,7 +82,7 @@ app.post('/login', function (req, res, next) {
 
 app.post('/checkEmail', function (req, res) {
     var email = req.body.email;
-    User.exists({ login:email}, function(err, result) {
+    User.exists({login: email}, function (err, result) {
         if (err) {
             res.send(err);
         } else {
