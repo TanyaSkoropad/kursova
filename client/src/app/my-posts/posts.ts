@@ -4,6 +4,7 @@ export class Posts {
   description: string;
   location: string;
   types: [string];
+  files: [string];
 
   constructor(description: string,
               location: string,

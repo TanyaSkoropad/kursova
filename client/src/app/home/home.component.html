@@ -1,12 +1,33 @@
-<div *ngIf="info.token; else loggedOut">
-  <h5 class="text-primary">Your Information</h5>
-  <p>
-    <strong>Username:</strong> {{info.username}}<br/>
-    <strong>Token:</strong> {{info.token}}.
-  </p>
-  <button class="btn btn-secondary" (click)="logout()">Logout</button>
+<br><br><br>
+<br>
+<div class="container-fluid">
+  <div fxLayout="row" fxLayoutWrap>
+    <!-- Card -->
+    <mdb-card *ngFor="let post of posts">
+      <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+        <!-- Card img -->
+        <mdb-card-img src="{{post.files[0]}}"
+                      alt="Card image cap"></mdb-card-img>
+        <a>
+          <div class="mask"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <mdb-card-body>
+        <!--Title-->
+        <mdb-card-title>
+          <h4>{{post.location}}</h4>
+        </mdb-card-title>
+
+        <!--Text-->
+        <mdb-card-text> {{post.description}}
+        </mdb-card-text>
+
+        <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
+      </mdb-card-body>
+    </mdb-card>
+
+    <!-- Card -->
+  </div>
 </div>
-
-<ng-template #loggedOut>
-
-</ng-template>

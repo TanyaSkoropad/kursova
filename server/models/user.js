@@ -44,7 +44,13 @@ const userSchema = new Schema({
     vereficationCode: {
         type: String,
         required: false
-    }
+    },
+    files : [
+        {
+            type: Schema.Types.ObjectId,
+            ref : "files"
+        }
+    ]
 });
 userSchema.statics.hashPassword = function hashPassword(password) {
     return bcrypt.hashSync(password, 10);

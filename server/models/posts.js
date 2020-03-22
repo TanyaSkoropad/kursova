@@ -16,8 +16,13 @@ const postsSchema = new Schema({
     creator:{
         type: Schema.Types.ObjectId,
         ref : "users"
-
-    }
+    },
+    files : [
+        {
+            type: Schema.Types.ObjectId,
+            ref : "files"
+        }
+    ]
 });
 
 module.exports = mongoose.model('posts', postsSchema);

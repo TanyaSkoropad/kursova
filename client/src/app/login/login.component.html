@@ -4,21 +4,27 @@
 <div style="height: 100vh; margin-left: 15%; " class="d-flex justify-content-left align-items-center">
   <form form ="loginForm" (ngSubmit)="onSubmit()" class="text-center p-5" style="border-radius: 25px;
         border:5px solid #ac7339;color: #ac7339;
-        padding: 10px; font-family:verdana">
-      <p class="h3 mb-4"> <kbd style="background-color: #5B320A; padding: 4%">Sign in</kbd></p>
+        padding: 10px; font-family:verdana"
+         #f="ngForm" novalidate>
+      <p class="h3 mb-4"> <kbd style="background-color: #5B320A; padding: 4%">Log in</kbd></p>
     <div class="form-group text-left">
       <label for="username">Username</label>
-      <input type="text" name="username" [(ngModel)]="loginForm.username" class="form-control mb-4">
+      <input type="text" name="username" [(ngModel)]="loginForm.username" class="form-control mb-4 " #username="ngModel">
+      <div style="color: red" *ngIf="username.invalid && username.touched">
+        <div *ngIf="username.errors.required" class="invalidBorder">Username is required</div>
+        <div *ngIf="loginForm.errors.required" class="invalidBorder">First name is required</div>
+      </div>
     </div>
     <div class="form-group text-left">
       <label for="password">Password</label>
       <input type="password" name="password" [(ngModel)]="loginForm.password" class="form-control mb-4">
     </div>
-      <p *ngIf = "showError" >Login or password is incorrect</p>
-      <button mdbBtn style="background-color: #ac7339;" class="my-4" block="true" type="submit">Sign in</button>
+      <p *ngIf = "showError" style="color: red" >Login or password is incorrect</p>
+      <button mdbBtn style="background-color: #ac7339;" class="my-4" block="true" type="submit">Log in</button>
+
 
       <p>Not a member?
-        <a href="/ui/signup" style="color: #ac7339">Register</a>
+          <u><a href="/ui/signup" style="color: #ac7339" >Register</a></u>
       </p>
     </form>
   </div>

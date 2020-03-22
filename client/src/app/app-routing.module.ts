@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'ui/home',
-    component: AppComponent
+    component: HomeComponent
     // component: MenuComponent
   },
   {
