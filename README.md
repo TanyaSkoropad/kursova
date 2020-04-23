@@ -1,3 +1,5 @@
+#cmd
+#//папка де знаходиться ваш проект
 #client: 
 #npm install 
 #ng serve
