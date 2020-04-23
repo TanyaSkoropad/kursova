@@ -1,6 +1,9 @@
+Відкрити командру строку з правами адміністратора
+Через >cd прописати шлях до папки з курсовою
 #client: 
 #npm install 
-#ng serve
+#ng serve/npm start
 
+#server:
 #npm install
-#server:node server.js
+#node server.js
