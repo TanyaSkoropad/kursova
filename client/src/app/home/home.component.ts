@@ -10,10 +10,11 @@ import {MyPostsService} from "../my-posts/my-posts.service";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  posts: [Posts] = [];
+  posts: Posts[];
   info: any;
 
-  constructor(private postService: MyPostsService,private token: TokenStorageService) {
+
+  constructor(private postService: MyPostsService, private token: TokenStorageService) {
   }
 
   ngOnInit() {

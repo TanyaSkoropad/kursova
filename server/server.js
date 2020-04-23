@@ -93,6 +93,9 @@ app.post('/upload', function (req, res) {
     // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
     let file = req.files.file;
     // Use the mv() method to place the file somewhere on your server
+    if (!fs.existsSync('../server/files/')){
+        fs.mkdirSync('../server/files/');
+    }
     file.mv('../server/files/' + file.name, function (err) {
         if (err) {
 
@@ -103,7 +106,7 @@ app.post('/upload', function (req, res) {
                 return res.sendStatus(409);
             } else {
                 console.log(gerFileUrlById(doc._id));
-                return res.send({_id: doc._id, url: gerFileUrlById(doc._id)});
+                return res.send({id: doc._id, url: gerFileUrlById(doc._id)});
             }
         });
     });

@@ -32,8 +32,8 @@ export class AuthService {
     return this.http.post<string>(this.signupUrl, info, httpOptions);
   }
 
-  checkEmail(email: String) {
-    return this.http.post<void>(this.checkEmailUrl, {email},httpOptions);
+  checkEmail(email: String): Observable<string> {
+    return this.http.post<string>(this.checkEmailUrl, {email}, httpOptions);
   }
 
 }
