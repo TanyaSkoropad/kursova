@@ -1,6 +1,6 @@
 #client: 
 #npm install 
-#ng serve
+#ng serve // npm start(для MacOS)
 
-#npm install
+#npm install 
 #server:node server.js
