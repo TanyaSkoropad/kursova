@@ -37,7 +37,8 @@
         <label for="email">Email</label>
         <pre style="color: red; display: inline"> *</pre>
         <input type="email" style="color: black; width: 330px;" name="email" [(ngModel)]="registerForm.email"
-               class="form-control mb-2" #email="ngModel" (ngModelChange)="emailChange()" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+               class="form-control mb-2" #email="ngModel" (ngModelChange)="emailChange()"
+               [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
                required email/>
         <p style="color: red" *ngIf="emailExist">User with this email already exists</p>
         <div style="color: red" *ngIf="email.invalid && email.touched">

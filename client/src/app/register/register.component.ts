@@ -15,7 +15,7 @@ export class RegisterComponent implements OnInit {
   isSignedUp = false;
   isSignUpFailed = false;
   errorMessage = '';
-  emailExist;
+  emailExist: boolean;
 
   constructor(private authService: AuthService, private userService: UserService) {
   }
@@ -45,9 +45,12 @@ export class RegisterComponent implements OnInit {
     );
   }
 
-  emailChange(): void {
+  emailChange() {
+    this.emailExist = false;
+    //noinspection TsLint
     this.authService.checkEmail(this.registerForm.email).subscribe(data => {
-      if (data === 'false') {
+      // @ts-ignore
+      if (data == false) {
         this.emailExist = false;
       } else {
         this.emailExist = true;
@@ -56,6 +59,7 @@ export class RegisterComponent implements OnInit {
       console.log(error);
     });
   }
+
 
   reloadPage() {
     window.location.href = '/ui/home';
