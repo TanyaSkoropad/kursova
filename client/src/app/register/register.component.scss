@@ -17,4 +17,14 @@
 .ng-invalid.ng-touched {
   border-color: red;
 }
+.description p {
+  position: fixed;
+    left: 50%;
+    right: 9%;
+    font-weight: 200;
+    color: white; //plart i only the best
+    top: 13%;
+    letter-spacing: 7px;
+    text-align: center;
+}
 

@@ -8,9 +8,9 @@
     <input type="text" name="location" [(ngModel)]="createPostForm.location" class="form-control mb-1"
            placeholder="location">
     <input type="text" name="types" [(ngModel)]="createPostForm.types" class="form-control mb-1" placeholder="type">
-    <button (click)="addType()" style="background-color: #ac7339;" class="my-4">add type</button>
-    <button (click)="createPost()" style="background-color: #ac7339;" block="true" class="my-4" type="submit">Create
-    </button>
+    <button (click)="addType()" style="background-color: #795548; border-radius:5px" class="my-4">add type</button>
+    <button (click)="createPost()" style="background-color: #795548; border-radius:5px;"
+            block="true" class="my-4" type="submit">Create</button>
 
   </form>
 
@@ -45,7 +45,7 @@
       <mdb-card-text> {{post.description}}
       </mdb-card-text>
 
-      <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
+      <a href="#" mdbBtn color="brown" mdbWavesEffect>Button</a>
     </mdb-card-body>
   </mdb-card>
 

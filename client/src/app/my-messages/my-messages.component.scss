@@ -1,7 +1,7 @@
 .container{
   margin: auto;
   width: 400px;
-  border: 2px solid rgb(211, 212, 211);
+  border: 2px solid rgb(204, 153, 102);
   padding: 10px;
   text-align: left;
   margin-right: 30%;
@@ -14,7 +14,7 @@ p {
 
 
 .button {
-  background-color: #336B87
+  background-color: #cc946c
 }
 
 
@@ -23,9 +23,9 @@ p {
 }
 
 #avatarChange button{
-  border-color: rgb(31, 84, 110);
+  border-color: rgb(204, 153, 102);
   color: white;
-  background-color: #336B87;
+  background-color: #cc946c;
   cursor: pointer;
   width: 40%;
   font-size: 100%;
@@ -35,20 +35,21 @@ p {
 
 #avatarChange button :hover{
   color: black;
-  background-color: #2987BB;
+  background-color: #cc946c;
   cursor: pointer;
 }
 
 .container-fluid {
-  background-color: #f1f1f1;
+  background-color: #966e54;
   margin: auto;
   width: 82%;
   height:82%;
-  border: 2px solid rgb(211, 212, 211);
+  border: 2px solid rgb(204, 153, 102);
   border-radius: 10px;
-  padding: 10px;
+  padding: 15px;
   margin-right: 1%;
   margin-bottom: 2%;
+
 }
 
 h3{
@@ -86,7 +87,7 @@ h3{
 }
 
 .desc a :hover{
-  color: #336B87;
+  color: #cc946c;
 }
 
 .card{

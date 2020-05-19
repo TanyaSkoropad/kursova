@@ -5,50 +5,50 @@
 }
 
    .notification {
-    background-color: #2D4161;
+    background-color: #a3673c;
     color: white;
     text-decoration: none;
     padding: 15px 26px;
     position: relative;
     display: inline-block;
     border-radius: 2px;
-    
+
   }
-  
+
   .notification:hover {
     text-emphasis-color: black;
-    background: #2987BB;
+    background: #a3673c;
   }
 
   .notification:hover .descr{
     text-emphasis-color: black;
-    background: #2987BB;
+    background: #a3673c;
     display:block;
     position:absolute;
     top:120px;
     z-index:9999;
     width:400px;
   }
-  
+
   .descr{
     display:none;
     margin-left:-350px;
     padding:10px;
     margin-top:17px;
-    background:#f3f3f3;
+    background:#966e54;
     height:200px;
     -moz-box-shadow:0 5px 5px rgba(0,0,0,0.3);
     -webkit-box-shadow:0 5px 5px rgba(0,0,0,0.3);
     box-shadow:0 5px 5px rgba(0,0,0,0.3);
 }
-  
+
   .notification .badge {
     position: absolute;
     top: -1px;
     right: 0px;
     padding: 5px 10px;
     border-radius: 50%;
-    background: #C4001A;
+    background: #cc946c;
     color: white;
   }
 
@@ -62,30 +62,30 @@
 
          /*----------Dropdown-----------*/
   .dropbtn {
-    background-color:#2D4161;
+    background-color:#241810; //кнопка іріна
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
   }
-  
+
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
     position: relative;
     display: inline-block;
   }
-  
+
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #241810;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-  
+
   /* Links inside the dropdown */
   .dropdown-content a {
     color: black;
@@ -93,19 +93,19 @@
     text-decoration: none;
     display: block;
   }
-  
+
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
-    background-color: #f1f1f1}
-  
+    background-color: #966e54}
+
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
+
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {
-    background-color: #2987BB;
+    background-color: #a3673c;
     border-radius: 4px;
   }
 
@@ -122,7 +122,7 @@
     margin-left: -150px;
     left: 70px;
     width: 200px;
-    background: #2D4161;
+    background: #453020; //бокова менюшка
     position: fixed;
     height: 100%;
     z-index: 10000;
@@ -152,8 +152,8 @@
     float: none;
     text-decoration: none;
     width: 200px;
-    background: #2D4161;
- //   border-bottom: 2px solid white;
+    background: #453020; //бокова менюшка
+    //border-bottom: 1px solid black; // полоски в менюшці
     -webkit-transition: background .5s;
     -moz-transition: background .5s;
     -o-transition: background .5s;
@@ -167,8 +167,8 @@
   float: none;
   text-decoration: none;
   width: 200px;
-  background: #2987BB;
-//   border-bottom: 2px solid white;
+  background: #241810; //надпис пларт
+  //border-bottom: 2px solid black;
   -webkit-transition: background .5s;
   -moz-transition: background .5s;
   -o-transition: background .5s;
@@ -199,7 +199,7 @@ padding-top: 15px;
 
 .sidebar-nav li a:hover {
   color: black;
-  background: #2987BB;
+  background: #966e54;   //виділяются кнопки
   text-decoration: none;
 }
 
@@ -230,7 +230,7 @@ padding-top: 15px;
   font-size: 20px;
   font-weight: bold;
   text-align: left;
-  background-color: #2987BB;
+  background-color: #241810;
   }
 
 .sidebar-nav > .sidebar-brand a {

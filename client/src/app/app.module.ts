@@ -24,6 +24,7 @@ import {  ReactiveFormsModule } from '@angular/forms';
 import {ToastrModule} from "ngx-toastr";
 import { MyPostsComponent } from './my-posts/my-posts.component';
 import { MyMessagesComponent } from './my-messages/my-messages.component';
+import { Component, OnInit } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -33,9 +34,10 @@ import { MyMessagesComponent } from './my-messages/my-messages.component';
     UserProfileComponent,
     PreviewComponent,
     MyPostsComponent,
-    MyMessagesComponent
+    MyMessagesComponent,
+
     // Material.MatDialogModule,
-    
+
   ],
   imports: [
     BrowserModule,

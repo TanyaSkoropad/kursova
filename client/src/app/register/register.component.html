@@ -1,9 +1,19 @@
 <div class="view w-100"
      style="background-image: url(../../assets/img/photo_2020-03-01_16-42-48.jpg); background-repeat: no-repeat;background-size: 100%"
      ng-app="">
+  <div class="description">
+    <p>The site “Plart” is developed mainly in the field of photography (photo shoots),
+      which will include both professional photographers and novice photographers and, of course,
+      site visitors (readers). It serves as a platform where photographers can publish their work,
+      projects, photo collections, collaborate with readers, receive constructive evaluation and be
+      inspired by the ideas of others. Readers, in turn, have the opportunity to communicate,
+      collaborate with photographers, get inspired and evaluate their work.
+      This is a platform with unlimited inspiration for you personally. So why not use it?
+    </p>
+  </div>
   <br>
   <div style="margin-left: 6%; margin-top: -1.4%" class="d-flex justify-content-left align-items-center">
-    <form form="registerForm" style="border-radius: 25px;border:5px solid #ac7339;
+    <form form="registerForm" style="border-radius: 25px; border:3px solid #ac7339;
    color: #ac7339; padding: 20px; font-family:verdana; margin: 1.5%"
           (ngSubmit)="onSubmit()" #f="ngForm" [mustMatch]="['password', 'confirmPassword']" novalidate>
 

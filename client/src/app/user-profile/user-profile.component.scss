@@ -1,7 +1,7 @@
 .container{
     margin: auto;
     width: 400px;
-    border: 2px solid rgb(211, 212, 211);
+    border: 2px solid rgb(204, 148, 108);
     padding: 10px;
     text-align: left;
     margin-right: 30%;
@@ -23,7 +23,7 @@ p {
 }
 
 #avatarChange button{
-    border-color: rgb(31, 84, 110);
+    border-color: rgb(204, 148, 108);
     color: white;
     background-color: #336B87;
     cursor: pointer;
@@ -38,13 +38,13 @@ p {
     background-color: #2987BB;
     cursor: pointer;
   }
-  
+
 .container-fluid {
-	background-color: #f1f1f1;
+	background-color: #966e54;
     margin: auto;
     width: 82%;
     height:82%;
-    border: 2px solid rgb(211, 212, 211);
+    border: 2px solid rgb(204, 148, 108);//рамка навколо заднього фону
     border-radius: 10px;
     padding: 10px;
     margin-right: 1%;
@@ -62,8 +62,8 @@ p {
 	width: 270px;
 	height: 100px;
 	left: 5%;
-    margin: 1em;
-    
+  margin: 1em;
+
   }
 
   .card-block .card .card-body{
@@ -78,7 +78,7 @@ p {
   .card-block .card .card-body i{
 	padding-left: 0%;
     margin-right: 20px;
-    
+
   }
 
   .desc a{
@@ -86,7 +86,7 @@ p {
   }
 
   .desc a :hover{
-    color: #336B87;
+    color: #966e54;
   }
 
  .card{
@@ -97,8 +97,8 @@ p {
 	width: 350px;
 	height: 400px;
 	text-align: center;
-    left: 1%;
-    margin: 2em;
+  left: 1%;
+  margin: 2em;
 }
 
 .info{
