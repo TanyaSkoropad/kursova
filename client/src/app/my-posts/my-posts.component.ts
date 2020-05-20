@@ -35,6 +35,7 @@ export class MyPostsComponent implements OnInit {
       this.createPostForm.location,
       this.types);
     this.post.files = this.filesId;
+    this.post.types = [this.createPostForm.types];
     this.postService.sendPostToServer(this.post).subscribe(
       data => {
         console.log(data);
@@ -48,10 +49,10 @@ export class MyPostsComponent implements OnInit {
     this.ngOnInit();
   }
 
-  addType(): void {
-    this.types.push(this.createPostForm.types);
-    this.createPostForm.types = '';
-  }
+  // addType(): void {
+  //   this.types.push(this.createPostForm.types);
+  //   this.createPostForm.types = '';
+  // }
 
 
   upload(files: File[]) {
